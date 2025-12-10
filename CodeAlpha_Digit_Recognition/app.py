@@ -3,14 +3,16 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 import cv2 
-
+import pickle as pk
 # ----------------------------
 # Load your trained ANN model
 # ----------------------------
 
 def load_model():
-    model = tf.keras.models.load_model("./model.keras")
-    return model
+    with open("model.pkl", "rb") as f:
+       
+       loaded_model = pk.load(f)
+    return loaded_model
 
 model = load_model()
 

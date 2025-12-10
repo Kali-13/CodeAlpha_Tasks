@@ -3,4 +3,4 @@ opencv-python-headless
 pandas
 numpy
 Pillow
-tensorflow==2.14.0
+tensorflow
