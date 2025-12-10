@@ -7,7 +7,7 @@ import cv2
 # ----------------------------
 # Load your trained ANN model
 # ----------------------------
-@st.cache_resource
+
 def load_model():
     model = tf.keras.models.load_model("./model.keras")
     return model
