@@ -4,12 +4,14 @@ from PIL import Image
 import tensorflow as tf
 import cv2 
 import pickle as pk
-# ----------------------------
-# Load your trained ANN model
-# ----------------------------
+from pathlib import Path
+
+pkl_path=Path(__file__).parents[0] / 'model.pkl'
+
+
 
 def load_model():
-    with open("model.pkl", "rb") as f:
+    with open(pkl_path, "rb") as f:
        
        loaded_model = pk.load(f)
     return loaded_model
