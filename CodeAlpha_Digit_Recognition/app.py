@@ -9,7 +9,7 @@ import cv2
 # ----------------------------
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("model.h5")
+    model = tf.keras.models.load_model("model.keras")
     return model
 
 model = load_model()
